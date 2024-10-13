@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <main>
+      <nav>
+        <a href="/">
+          <img src="/imgs/pingu.jpeg" id="profile-picture" />
+        </a>
+        <a class="pretty-link" href="/">Home</a>
+        {{ range .Site.Sections }}
+        <li style="list-style-type: none">
+          <a class="pretty-link" href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
+        </li>
+        {{ end }}
+        <a class="pretty-link" href="/index.xml">RSS</a>
+      </nav>
+      <div id="main">
+        {{ block "main" . }}
+        <!-- "main" block goes here -->
+        {{ end }}
+      </div>
+    </main>
+  </body>
+</html>

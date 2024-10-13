@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="post-meta" >
+  <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+  {{ with .Params.author }}
+  <h2 class="author">{{ . }}</h2>
+  {{ end }} {{ if (gt .Params.date 0) }}
+  <p id="post-update-date">Last updated on {{ .Date.Format "January 2, 2006" }}.</p>
+  {{ end }}
+</div>
+
+<div class="post-content">
+{{ .Content }}
+</div>
+{{ end }}

@@ -1,0 +1,84 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 6px;
+}
+
+.pretty-link {
+  color: #3498db; /* Modern blue color */
+  text-decoration: none; /* Remove the underline */
+  font-weight: 500; /* Optional: Add slight boldness */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+  border-bottom: 2px solid transparent; /* Underline effect using border */
+}
+
+.pretty-link:hover {
+  color: #2c3e50; /* Change color on hover */
+  border-bottom: 2px solid #3498db; /* Underline on hover */
+}
+
+.pretty-link:active {
+  color: #2980b9; /* Change color when active (clicked) */
+}
+
+#profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 12em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 20px;
+    padding: 20px;
+}
+
+main img {
+    max-width: 100%;
+}
+
+html {
+    width: 100vw;
+}
+
+body {
+    max-width: 50em;
+    margin: auto;
+    height: 100vh;
+}
+
+figure .caption {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    text-align: center;
+}
+
+blockquote {
+    border-left: 4px solid #000;
+    padding-left: 15px;
+    margin-left: 0;
+    color: #333;
+}
+
+#post-update-date {
+    font-style: italic;
+}
+
+.dropcap {
+    float: left;
+    font-size: 4rem;
+    line-height: 0.8;
+    margin-right: 0.2em;
+}
+
+.post-content {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.0rem;
+    line-height: 1.8;
+}
+
+.post-content p {
+    margin: 1rem auto;
+}
