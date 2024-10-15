@@ -11,4 +11,20 @@
 <div class="post-content">
 {{ .Content }}
 </div>
+
+<hr class="post-end-hr"/>
+
+<footer class="post-footer">
+  {{ $pages := .CurrentSection.Pages.ByDate.Reverse }}
+  <div class="post-footer-prev">
+  {{ with $pages.Prev . }}
+  <a class="pretty-link" href="{{ .RelPermalink }}">< {{ .Title }}</a>
+  {{ end }}
+  </div>
+  <div class="post-footer-next">
+  {{ with $pages.Next . }}
+  <a class="pretty-link" href="{{ .RelPermalink }}">{{ .Title }} ></a>
+  {{ end }}
+  </div>
+</footer>
 {{ end }}

@@ -2,7 +2,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 6px;
+    gap: 3px;
 }
 
 .pretty-link {
@@ -66,6 +66,13 @@ blockquote {
     font-style: italic;
 }
 
+.main {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .dropcap {
     float: left;
     font-size: 4rem;
@@ -81,4 +88,34 @@ blockquote {
 
 .post-content p {
     margin: 1rem auto;
+}
+
+.post-footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 24px auto;
+}
+
+.post-footer-prev {
+    text-align: left;
+}
+
+.post-footer-next {
+    text-align: right;
+}
+
+.post-end-hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #007acc, rgba(0, 0, 0, 0)); 
+  margin: 32px 0; /* Spacing around the rule */
+  width: 100%; /* Full-width */
+  max-width: 600px; /* Optional: limit max width for a neater look */
+  position: relative;
+}
+
+.list-ul {
+    padding-left: 0px;
+    line-height: 1.6rem;
+    font-weight: 500; 
 }

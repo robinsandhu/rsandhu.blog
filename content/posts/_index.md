@@ -1,5 +1,0 @@
-+++
-title = 'Posts'
-+++
-
-# Blog Posts

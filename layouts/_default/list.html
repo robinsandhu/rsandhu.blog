@@ -1,10 +1,10 @@
 {{ define "main" }}
-{{ .Content }}
-<ul>
+<h1>{{ .Title }}</h1>
+<ul class="list-ul">
   {{ $pages := .Pages }} {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end
   }} {{ range (where $pages "Section" "!=" "") }}
   <li style="list-style-type: none">
-    <span class="date">{{ .Date.Format "2006 01 02" }}</span>
+    <span class="list-date">{{ .Date.Format "02 Jan, 2006" }}</span>
     <a class="pretty-link" href="{{ relURL .RelPermalink }}">{{ .Title | markdownify }}</a>
   </li>
   {{ end }}
