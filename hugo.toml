@@ -2,3 +2,9 @@ baseURL = '/'
 languageCode = 'en-us'
 title = 'rsandhu'
 
+[outputs]
+  home = ['html']
+  section = ['html']
+  taxonomy = ['html']
+  term = ['html']
+
