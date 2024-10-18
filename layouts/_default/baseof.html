@@ -22,7 +22,7 @@
           <a class="pretty-link" href="{{ relURL .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
         </li>
         {{ end }}
-        <a class="pretty-link" href="{{ relURL `/posts/index.xml` }}">RSS</a>
+        <a class="pretty-link" href="{{ relURL `posts/index.xml` }}">RSS</a>
       </nav>
       <div id="content">
         {{ block "main" . }}
